@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: tdd_blog_development
+  pool: 5
+  username: 
+  password:
+ 
+test:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: tdd_blog_test
+  pool: 5
+  username: 
+  password:
+
+production:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: tdd_blog_production
+  pool: 5
+  username: 
+  password:

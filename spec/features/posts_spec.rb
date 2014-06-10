@@ -34,12 +34,12 @@ describe "Posts" do
 		end
 	end
 
-	# context "edit a post" do
-	# 	it "redirects to the post page if successful" do
-	# 		visit edit_post_path(post)
-	# 		fill_in "Title", :with => "hello"
-	# 		click_on "Edit Post"
-	# 		expect(page).to have_content "hello"
-	# 	end
-	# end
+	context "edit a post" do
+		it "redirects to the post page if successful" do
+			visit edit_post_path(post)
+			fill_in "Title", :with => "hello"
+			click_on "Edit Post"
+			expect(page).to have_content "hello"
+		end
+	end
 end

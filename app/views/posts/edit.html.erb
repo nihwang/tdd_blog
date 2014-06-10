@@ -1,0 +1,10 @@
+<h1>Update <%= @post.title %></h1>
+
+<ul>
+	<%= form_for @post do |f| %>
+		<li>
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+		</li>
+		
+</ul>

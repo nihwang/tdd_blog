@@ -26,11 +26,20 @@ describe PostsController do
 		end
 	end
 
-	context "create" do
+	context "#create" do
 		it "creates with valid attributes" do
 			expect {
-				post :create, :
-			}
+				post :create, :post => FactoryGirl.attributes_for(:post)
+			}.to change { Post.count }.by(1)
+			expect(response).to be_redirect
+		end
+	end
+
+	context "#show" do
+		let(:post) { FactoryGirl.create :post }
+		it "is successful" do
+			get :show, :id => post.id
+			expect(response).to be_success
 		end
 	end
 

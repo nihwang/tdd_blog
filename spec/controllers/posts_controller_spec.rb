@@ -20,6 +20,18 @@ describe PostsController do
 			expect(response).to be_success
 		end
 
+		it "assigns @post to the Post found by id" do
+			get :new
+			expect(assigns(:post)).to be_a_new Post
+		end
+	end
+
+	context "create" do
+		it "creates with valid attributes" do
+			expect {
+				post :create, :
+			}
+		end
 	end
 
 end

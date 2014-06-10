@@ -23,4 +23,23 @@ describe "Posts" do
 			expect(page).to have_content "Title"
 		end
 	end
+
+	context "create a post" do
+		it "redirects to a post page if succesful" do
+			visit new_post_path
+			fill_in "Title", :with => "Hello"
+			fill_in "Body", :with => "What's the weather like today"
+			click_on "Create Post"
+			expect(page).to have_content "Hello"
+		end
+	end
+
+	# context "edit a post" do
+	# 	it "redirects to the post page if successful" do
+	# 		visit edit_post_path(post)
+	# 		fill_in "Title", :with => "hello"
+	# 		click_on "Edit Post"
+	# 		expect(page).to have_content "hello"
+	# 	end
+	# end
 end

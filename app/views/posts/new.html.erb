@@ -4,7 +4,11 @@
 	<%= form_for @post do |f| %>
 		<li>
 			<%= f.label :title %>
-			<%= f.text_field :body %>
+			<%= f.text_field :title %>
+		</li>
+		<li>
+			<%= f.label :body %>
+			<%= f.text_area :body, :size => 150 %>
 		</li>
 		<li>
 			<%= f.submit %>

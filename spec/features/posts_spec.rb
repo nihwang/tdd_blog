@@ -19,7 +19,8 @@ describe "Posts" do
 
 	context "Create Post Page" do
 		it "should have a new post form" do
-			
+			visit new_post_path
+			expect(page).to have_content "Title"
 		end
 	end
 end

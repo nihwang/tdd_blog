@@ -38,7 +38,7 @@ describe "Posts" do
 		it "redirects to the post page if successful" do
 			visit edit_post_path(post)
 			fill_in "Title", :with => "hello"
-			click_on "Edit Post"
+			click_on "Update Post"
 			expect(page).to have_content "hello"
 		end
 	end

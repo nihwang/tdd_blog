@@ -43,4 +43,17 @@ describe PostsController do
 		end
 	end
 
+	context "#edit" do
+		let(:post) { FactoryGirl.create :post }
+		it "is successful" do
+			get :edit, :id => post.id
+			expect(response).to be_success
+		end
+
+		it "assigns @post to the Post found by id" do
+			get :edit, :id => post.id
+			expect(assigns(:post)).to eq post
+		end
+	end
+
 end

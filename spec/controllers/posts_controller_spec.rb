@@ -56,4 +56,14 @@ describe PostsController do
 		end
 	end
 
+	context "#update" do
+		let!(:post) { FactoryGirl.create :post }
+		it "updates with valid attributes" do
+			expect {
+				put :update, :id => post.id, :post => {:title => "hey"}
+			}.to change { post.reload.title }.to("hey")
+			expect(response).to be_redirect
+		end
+	end
+
 end

@@ -66,4 +66,13 @@ describe PostsController do
 		end
 	end
 
+	context "#destroy" do
+		let!(:post) { FactoryGirl.create :post }
+		it "should delete a post" do
+			expect {
+				delete :destory, :id => post.id
+			}.to change { Post.count }.by(-1)
+		end
+	end
+
 end

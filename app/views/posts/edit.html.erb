@@ -6,6 +6,10 @@
 			<%= f.label :title %>
 			<%= f.text_field :title %>
 		</li>
+		<li>
+			<%= f.label :body %>
+			<%= f.text_area :body, :size => 150 %>
+		</li>
 		<li><%= f.submit %></li>
 	<% end %>
 </ul>

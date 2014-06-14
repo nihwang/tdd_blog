@@ -42,4 +42,12 @@ describe "Posts" do
 			expect(page).to have_content "hello"
 		end
 	end
+
+	context "delete a post" do
+		it "should delete the post from the page" do
+			visit post_path(post)
+			click_on "Delete"
+			expect(page).not_to have_content(post.title)
+		end
+	end
 end
